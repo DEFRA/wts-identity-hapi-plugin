@@ -1,0 +1,48 @@
+{
+  "name": "@defra/wts-identity-hapi-plugin",
+  "version": "1.0.0",
+  "description": "A hapi auth plugin to allow easy integration with DEFRA's Identity Management system",
+  "repository": {
+    "type": "git",
+    "url": "github:DEFRA/wts-identity-hapi-plugin"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "clean": "",
+    "lint": "eslint . --cache",
+    "test": "echo \"No test specified\"",
+    "testx": "npx @hapi/lab -v -I",
+    "testx:lcov": "npx @hapi/lab -vc -r lcov -o coverage.lcov"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "Department for Environment, Food & Rural Affairs",
+  "license": "See LICENSE.md",
+  "dependencies": {
+    "@hapi/cookie": "^11.0.0",
+    "@hapi/hoek": "^10.0.0",
+    "await-to-js": "^3.0.0",
+    "debug": "^4.3.4",
+    "got": "^12.3.1",
+    "joi": "^17.6.0",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "openid-client": "^5.1.8",
+    "rimraf": "^3.0.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@hapi/code": "^9.0.1",
+    "@hapi/lab": "^25.0.1",
+    "eslint": "^8.21.0",
+    "pre-commit": "^1.2.2",
+    "snazzy": "^9.0.0",
+    "standard": "^17.0.0",
+    "testdouble": "^3.16.0"
+  }
+}
